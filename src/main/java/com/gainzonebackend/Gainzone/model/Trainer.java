@@ -33,9 +33,6 @@ public class Trainer {
     private List<WorkoutPlan> workoutPlan;
 
     @OneToMany(mappedBy = "trainer")
-    private List<VirtualSession> sessions;
-
-    @OneToMany(mappedBy = "trainer")
     private List<User> users;
 
     @OneToMany(mappedBy = "trainer")
