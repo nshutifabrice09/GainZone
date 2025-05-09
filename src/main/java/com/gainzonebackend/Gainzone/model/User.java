@@ -19,10 +19,10 @@ public class User {
     private Long id;
     @Column(unique = true)
     private String membershipId;
-    private String first_name;
-    private String last_name;
+    private String firstName;
+    private String lastName;
     private String email;
-    private String phone_number;
+    private String phoneNumber;
     private String password;
     private String address;
     private int age;

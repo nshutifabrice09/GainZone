@@ -20,13 +20,24 @@ public class Trainer {
     private Long id;
     @Column(unique = true)
     private String cid;
-    private String first_name;
-    private String last_name;
-    private String email;
-    private String phone_number;
+    private String firstName;
+    private String lastName;
+    private String profilePictureUrl;
+    private String certifications;
+    private Double rating;
+    private String phoneNumber;
     private String password;
-    private String address;
     private String profession;
+
     @OneToMany(mappedBy = "trainer")
     private List<WorkoutPlan> workoutPlan;
+
+    @OneToMany(mappedBy = "trainer")
+    private List<VirtualSession> sessions;
+
+    @OneToMany(mappedBy = "trainer")
+    private List<User> users;
+
+    @OneToMany(mappedBy = "trainer")
+    private List<NutritionPlan> nutritionPlans;
 }
