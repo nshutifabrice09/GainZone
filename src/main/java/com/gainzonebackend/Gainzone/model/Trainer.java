@@ -10,8 +10,8 @@ import java.util.List;
 
 @Data
 @Builder
-@Table(name = "trainers")
 @Entity
+@Table(name = "trainers")
 @NoArgsConstructor
 @AllArgsConstructor
 public class Trainer {
@@ -28,5 +28,5 @@ public class Trainer {
     private String address;
     private String profession;
     @OneToMany(mappedBy = "trainer")
-    private List<Booking> booking  ;
+    private List<WorkoutPlan> workoutPlan;
 }
