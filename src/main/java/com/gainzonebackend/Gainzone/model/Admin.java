@@ -1,2 +1,5 @@
-package com.gainzonebackend.Gainzone.model;public class Admin {
+package com.gainzonebackend.Gainzone.model;
+
+
+public class Admin {
 }
