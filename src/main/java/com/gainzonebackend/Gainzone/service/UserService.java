@@ -4,7 +4,7 @@ import com.gainzonebackend.Gainzone.model.User;
 
 import java.util.List;
 
-public interface UserRepository {
+public interface UserService {
     List<User> getAllUsers();
     User getUserByMembershipId(String membershipId);
     User saveUser(User user);
