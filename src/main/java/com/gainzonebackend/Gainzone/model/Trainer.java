@@ -29,12 +29,12 @@ public class Trainer {
     private String password;
     private String profession;
 
-    @OneToMany(mappedBy = "trainer")
+    @OneToMany
     private List<WorkoutPlan> workoutPlan;
 
-    @OneToMany(mappedBy = "trainer")
+    @OneToMany
     private List<User> users;
 
-    @OneToMany(mappedBy = "trainer")
+    @OneToMany
     private List<NutritionPlan> nutritionPlans;
 }
