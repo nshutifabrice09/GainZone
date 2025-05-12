@@ -1,6 +1,7 @@
 package com.gainzonebackend.Gainzone.service;
 
 import com.gainzonebackend.Gainzone.model.Admin;
+import com.gainzonebackend.Gainzone.repository.AdminRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -8,9 +9,15 @@ import java.util.List;
 @Service
 public class AdminServiceImplementation implements AdminService{
 
+    private final AdminRepository adminRepository;
+
+    public AdminServiceImplementation(AdminRepository adminRepository) {
+        this.adminRepository = adminRepository;
+    }
+
     @Override
     public List<Admin> getAllAdmins() {
-        return null;
+        return adminRepository.findAll();
     }
 
     @Override
@@ -20,7 +27,7 @@ public class AdminServiceImplementation implements AdminService{
 
     @Override
     public Admin saveAdmin(Admin admin) {
-        return null;
+        return adminRepository.save(admin);
     }
 
     @Override

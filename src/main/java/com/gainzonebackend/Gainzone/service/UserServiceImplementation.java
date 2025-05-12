@@ -1,15 +1,24 @@
 package com.gainzonebackend.Gainzone.service;
 
 import com.gainzonebackend.Gainzone.model.User;
+import com.gainzonebackend.Gainzone.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class UserServiceImplementation implements UserService{
+
+
+    private final UserRepository userRepository;
+
+    public UserServiceImplementation(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
     @Override
     public List<User> getAllUsers() {
-        return null;
+        return userRepository.findAll();
     }
 
     @Override
@@ -19,7 +28,7 @@ public class UserServiceImplementation implements UserService{
 
     @Override
     public User saveUser(User user) {
-        return null;
+        return userRepository.save(user);
     }
 
     @Override

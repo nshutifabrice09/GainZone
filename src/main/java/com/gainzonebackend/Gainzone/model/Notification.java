@@ -22,7 +22,7 @@ public class Notification {
     private String message;
 
     @Enumerated(EnumType.STRING)
-    private NotificationType type; // EMAIL, SMS, IN_APP=
+    private NotificationType type;
     private LocalDateTime sentAt;
     private Boolean isRead;
 
