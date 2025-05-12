@@ -1,5 +1,7 @@
 package com.gainzonebackend.Gainzone.controller;
 
+import com.gainzonebackend.Gainzone.model.Admin;
+import com.gainzonebackend.Gainzone.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
