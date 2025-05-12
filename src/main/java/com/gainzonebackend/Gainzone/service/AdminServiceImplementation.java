@@ -15,6 +15,7 @@ public class AdminServiceImplementation implements AdminService{
         this.adminRepository = adminRepository;
     }
 
+
     @Override
     public List<Admin> getAllAdmins() {
         return adminRepository.findAll();
