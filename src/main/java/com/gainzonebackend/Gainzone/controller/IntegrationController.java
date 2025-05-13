@@ -12,13 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class IntegrationController {
 
     private final IntegrationService integrationService;
-    private final UserService userService;
 
     @Autowired
-    public IntegrationController(IntegrationService integrationService, UserService userService) {
+    public IntegrationController(IntegrationService integrationService) {
         this.integrationService = integrationService;
-        this.userService = userService;
     }
 
-
+        
 }
