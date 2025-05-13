@@ -40,6 +40,6 @@ public class IntegrationServiceImplementation implements IntegrationService{
 
     @Override
     public void removeById(Long id) {
-
+        integrationRepository.deleteById(id);
     }
 }
