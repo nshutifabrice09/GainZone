@@ -25,7 +25,7 @@ public class Integration {
     private LocalDateTime lastSyncedAt;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "userId")
     @JsonIgnore
     private User user;
 
