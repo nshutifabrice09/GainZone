@@ -39,11 +39,6 @@ public class IntegrationServiceImplementation implements IntegrationService{
 
 
     @Override
-    public Integration updateIntegration(Long id, Integration integration) {
-        return null;
-    }
-
-    @Override
     public void removeById(Long id) {
 
     }
