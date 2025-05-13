@@ -23,7 +23,7 @@ public class AdminServiceImplementation implements AdminService{
 
     @Override
     public Admin getAdminByUsername(String username) {
-        return null;
+        return adminRepository.findByUsername(username);
     }
 
     @Override
@@ -33,11 +33,16 @@ public class AdminServiceImplementation implements AdminService{
 
     @Override
     public Admin updateAdmin(String username, Admin admin) {
+        Admin existAdmin = adminRepository.findByUsername(username);
+        if(existAdmin !=null){
+            existAdmin.setUsername(admin.getUsername());
+            existAdmin.setPassword(admin.getPassword());
+        }
         return null;
     }
 
     @Override
     public void removeByUsername(String username) {
-
+        adminRepository.removeByUsername(username);
     }
 }
