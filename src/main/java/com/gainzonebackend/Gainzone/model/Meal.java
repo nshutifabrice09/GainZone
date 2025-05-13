@@ -27,7 +27,7 @@ public class Meal {
     private Boolean logged;
 
     @ManyToOne
-    @JoinColumn(name = "nutrition_plan_id")
+    @JoinColumn(name = "nutritionPlanId")
     @JsonIgnore
     private NutritionPlan nutritionPlan;
 

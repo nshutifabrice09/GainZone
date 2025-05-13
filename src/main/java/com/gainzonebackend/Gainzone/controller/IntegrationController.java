@@ -35,4 +35,9 @@ public class IntegrationController {
         return integrationService.getIntegrationById(id);
     }
 
+    @DeleteMapping("/integrations/{id}")
+    public void deleteById(@PathVariable ("id") Long id){
+        integrationService.removeById(id);
+    }
+
 }
