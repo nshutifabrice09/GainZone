@@ -27,7 +27,7 @@ public class IntegrationServiceImplementation implements IntegrationService{
 
     @Override
     public Integration getIntegrationById(Long id) {
-        return integrationRepository.getReferenceById(id);
+        return integrationRepository.(id);
     }
 
     @Override

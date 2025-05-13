@@ -2,6 +2,7 @@ package com.gainzonebackend.Gainzone.service;
 
 import com.gainzonebackend.Gainzone.model.Meal;
 import com.gainzonebackend.Gainzone.repository.MealRepository;
+import com.gainzonebackend.Gainzone.repository.NutritionPlanRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,27 +12,27 @@ import java.util.List;
 public class MealServiceImplementation implements MealService{
 
     private final MealRepository mealRepository;
-
+    private final NutritionPlanRepository nutritionPlanRepository;
     @Autowired
-    public MealServiceImplementation(MealRepository mealRepository) {
+    public MealServiceImplementation(MealRepository mealRepository, NutritionPlanRepository nutritionPlanRepository) {
         this.mealRepository = mealRepository;
-
+        this.nutritionPlanRepository = nutritionPlanRepository;
     }
 
 
     @Override
     public List<Meal> getAllMeals() {
-        return null;
+        return mealRepository.findAll();
     }
 
     @Override
     public Meal getMealById(Long id) {
-        return null;
+        return mealRepository.findById(id);
     }
 
     @Override
     public Meal saveMeal(Meal meal, Long nutritionPlanId) {
-        return null;
+
     }
 
 
