@@ -1,9 +1,9 @@
 package com.gainzonebackend.Gainzone.controller;
 
+import com.gainzonebackend.Gainzone.model.NutritionPlan;
 import com.gainzonebackend.Gainzone.service.NutritionPlanService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin("http://localhost:3000")
@@ -15,5 +15,11 @@ public class NutritionPlanController {
     public NutritionPlanController(NutritionPlanService nutritionPlanService){
         this.nutritionPlanService= nutritionPlanService;
     }
-    
+
+    @PostMapping("/nutritionPlan/{trainerId}/{userId}")
+    public NutritionPlan saveNutritionPlan(@RequestBody NutritionPlan nutritionPlan,
+                                           @PathVariable Long trainerId,
+                                           @PathVariable Long userId){
+        return nutritionPlanService.saveNutritionPlan(nutritionPlan, trainerId, userId);
+    }
 }

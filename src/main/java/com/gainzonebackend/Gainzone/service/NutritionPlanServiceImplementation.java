@@ -1,6 +1,8 @@
 package com.gainzonebackend.Gainzone.service;
 
 import com.gainzonebackend.Gainzone.model.NutritionPlan;
+import com.gainzonebackend.Gainzone.model.Trainer;
+import com.gainzonebackend.Gainzone.model.User;
 import com.gainzonebackend.Gainzone.repository.NutritionPlanRepository;
 import com.gainzonebackend.Gainzone.repository.TrainerRepository;
 import com.gainzonebackend.Gainzone.repository.UserRepository;
@@ -25,17 +27,21 @@ public class NutritionPlanServiceImplementation implements NutritionPlanService{
 
     @Override
     public List<NutritionPlan> getAllNutritionPlans() {
-        return null;
+        return nutritionPlanRepository.findAll();
     }
 
     @Override
     public NutritionPlan getNutritionPlanById(Long id) {
-        return null;
+        return nutritionPlanRepository.findNutritionById(id);
     }
 
     @Override
     public NutritionPlan saveNutritionPlan(NutritionPlan nutritionPlan, Long trainerId, Long userId) {
-        return null;
+        Trainer trainer = trainerRepository.findTrainerById(trainerId);
+        User user = userRepository.findUserById(userId);
+        nutritionPlan.setTrainer(trainer);
+        nutritionPlan.setUser(user);
+        return nutritionPlanRepository.save(nutritionPlan);
     }
 
 
@@ -46,6 +52,7 @@ public class NutritionPlanServiceImplementation implements NutritionPlanService{
 
     @Override
     public void removeById(Long id) {
+        nutritionPlanRepository.deleteById(id);
 
     }
 }
