@@ -17,7 +17,6 @@ public class MealServiceImplementation implements MealService{
     @Autowired
     public MealServiceImplementation(MealRepository mealRepository, NutritionPlanRepository nutritionPlanRepository) {
         this.mealRepository = mealRepository;
-
         this.nutritionPlanRepository = nutritionPlanRepository;
     }
 
@@ -29,7 +28,7 @@ public class MealServiceImplementation implements MealService{
 
     @Override
     public Meal getMealById(Long id) {
-        return null;
+        return mealRepository.findMealById(id);
     }
 
 
