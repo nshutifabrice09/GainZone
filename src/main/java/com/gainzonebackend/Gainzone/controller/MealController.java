@@ -28,4 +28,14 @@ public class MealController {
     public List<Meal> mealList(){
         return mealService.getAllMeals();
     }
+
+    @GetMapping("/meal/{id}")
+    public Meal getMealById(@PathVariable ("id") Long id){
+        return mealService.getMealById(id);
+    }
+
+    @DeleteMapping("/meals/meal/{id}")
+    public void removeById(@PathVariable ("id") Long id){
+        mealService.removeById(id);
+    }
 }

@@ -47,6 +47,6 @@ public class MealServiceImplementation implements MealService{
 
     @Override
     public void removeById(Long id) {
-
+        mealRepository.deleteById(id);
     }
 }
