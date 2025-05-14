@@ -20,7 +20,7 @@ public class Subscription {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(unique = true)
-    private String stripeSubscriptionId;
+    private String SubscriptionId;
 
     @Enumerated(EnumType.STRING)
     private SubscriptionPlan plan;
@@ -46,11 +46,11 @@ public class Subscription {
     }
 
     public String getStripeSubscriptionId() {
-        return stripeSubscriptionId;
+        return SubscriptionId;
     }
 
-    public void setStripeSubscriptionId(String stripeSubscriptionId) {
-        this.stripeSubscriptionId = stripeSubscriptionId;
+    public void setStripeSubscriptionId(String SubscriptionId) {
+        this.SubscriptionId = SubscriptionId;
     }
 
     public SubscriptionPlan getPlan() {
