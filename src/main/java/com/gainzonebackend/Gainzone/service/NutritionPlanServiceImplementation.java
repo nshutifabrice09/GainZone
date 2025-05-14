@@ -17,8 +17,10 @@ public class NutritionPlanServiceImplementation implements NutritionPlanService{
     private final UserRepository userRepository;
 
     @Autowired
-    public NutritionPlanServiceImplementation(NutritionPlanRepository nutritionPlanRepository) {
+    public NutritionPlanServiceImplementation(NutritionPlanRepository nutritionPlanRepository, TrainerRepository trainerRepository, UserRepository userRepository) {
         this.nutritionPlanRepository = nutritionPlanRepository;
+        this.trainerRepository = trainerRepository;
+        this.userRepository = userRepository;
     }
 
     @Override
