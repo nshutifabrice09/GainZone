@@ -18,8 +18,8 @@ public class SubscriptionController {
     }
 
     @PostMapping("/subscription/{userId}")
-    public Subscription saveSubscription(@RequestBody Subscription subscription) {
-        return subscriptionService.saveSubscription(subscription);
+    public Subscription save(@RequestBody Subscription subscription, @PathVariable("userId") Long userId) {
+        return subscriptionService.saveSubscription(subscription, userId);
     }
 
     @GetMapping("/subscriptions")

@@ -18,9 +18,10 @@ public class SubscriptionServiceImplementation implements SubscriptionService{
     }
 
     @Override
-    public Subscription saveSubscription(Subscription subscription) {
+    public Subscription saveSubscription(Subscription subscription, Long userId) {
         return null;
     }
+
 
     @Override
     public Subscription updateSubscription(Long id, Subscription subscription) {
