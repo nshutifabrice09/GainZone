@@ -19,7 +19,7 @@ public class IntegrationController {
         this.integrationService = integrationService;
     }
 
-    @PostMapping("/integration")
+    @PostMapping("/integration/{userId}")
     public Integration save(@RequestBody Integration integration, @PathVariable("userId")Long userId){
         return integrationService.saveIntegration(integration, userId);
     }
