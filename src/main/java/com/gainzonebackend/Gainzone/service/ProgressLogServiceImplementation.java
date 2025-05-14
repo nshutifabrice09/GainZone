@@ -1,12 +1,26 @@
 package com.gainzonebackend.Gainzone.service;
 
 import com.gainzonebackend.Gainzone.model.ProgressLog;
+import com.gainzonebackend.Gainzone.repository.ProgressLogRepository;
+import com.gainzonebackend.Gainzone.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class ProgressLogServiceImplementation implements ProgressLogService{
+
+
+    private final ProgressLogRepository progressLogRepository;
+    private final UserRepository userRepository;
+
+    @Autowired
+    public ProgressLogServiceImplementation(ProgressLogRepository progressLogRepository, UserRepository userRepository) {
+        this.progressLogRepository = progressLogRepository;
+        this.userRepository = userRepository;
+    }
+
     @Override
     public List<ProgressLog> getAllProgressLogs() {
         return null;
@@ -18,9 +32,10 @@ public class ProgressLogServiceImplementation implements ProgressLogService{
     }
 
     @Override
-    public ProgressLog saveProgressLog(ProgressLog progressLog) {
+    public ProgressLog saveProgressLog(ProgressLog progressLog, Long userId) {
         return null;
     }
+
 
     @Override
     public ProgressLog updateProgressLog(Long id, ProgressLog progressLog) {

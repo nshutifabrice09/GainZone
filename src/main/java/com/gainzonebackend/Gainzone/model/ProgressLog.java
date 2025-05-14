@@ -28,7 +28,7 @@ public class ProgressLog {
     private LocalDateTime loggedAt;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "userId")
     @JsonIgnore
     private User user;
 

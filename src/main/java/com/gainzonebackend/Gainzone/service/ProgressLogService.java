@@ -7,7 +7,7 @@ import java.util.List;
 public interface ProgressLogService {
     List<ProgressLog> getAllProgressLogs();
     ProgressLog getProgressLogById(Long id);
-    ProgressLog saveProgressLog(ProgressLog progressLog);
+    ProgressLog saveProgressLog(ProgressLog progressLog, Long userId);
     ProgressLog updateProgressLog(Long id, ProgressLog progressLog);
     void removeById(Long id);
 }
