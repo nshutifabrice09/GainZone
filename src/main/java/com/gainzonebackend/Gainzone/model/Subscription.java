@@ -19,8 +19,6 @@ public class Subscription {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(unique = true)
-    private String SubscriptionId;
 
     @Enumerated(EnumType.STRING)
     private SubscriptionPlan plan;
@@ -43,14 +41,6 @@ public class Subscription {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getStripeSubscriptionId() {
-        return SubscriptionId;
-    }
-
-    public void setStripeSubscriptionId(String SubscriptionId) {
-        this.SubscriptionId = SubscriptionId;
     }
 
     public SubscriptionPlan getPlan() {
