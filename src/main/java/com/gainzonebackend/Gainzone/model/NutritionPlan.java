@@ -20,6 +20,8 @@ public class NutritionPlan {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(unique = true)
+    private String nutritionPlanId;
     private String title;
     private String description;
     private Integer dailyCalories;
@@ -29,12 +31,12 @@ public class NutritionPlan {
     private LocalDateTime updatedAt;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "userId")
     @JsonIgnore
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "coach_id")
+    @JoinColumn(name = "coachId")
     @JsonIgnore
     private Trainer trainer;
 
@@ -47,6 +49,14 @@ public class NutritionPlan {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getNutritionPlanId() {
+        return nutritionPlanId;
+    }
+
+    public void setNutritionPlanId(String nutritionPlanId) {
+        this.nutritionPlanId = nutritionPlanId;
     }
 
     public String getTitle() {

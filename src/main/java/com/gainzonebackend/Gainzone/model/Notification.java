@@ -19,6 +19,8 @@ public class Notification {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(unique = true)
+    private String notificationId;
     private String message;
 
     @Enumerated(EnumType.STRING)
@@ -27,7 +29,7 @@ public class Notification {
     private Boolean isRead;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "userId")
     @JsonIgnore
     private User user;
 
@@ -37,6 +39,14 @@ public class Notification {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getNotificationId() {
+        return notificationId;
+    }
+
+    public void setNotificationId(String notificationId) {
+        this.notificationId = notificationId;
     }
 
     public String getMessage() {

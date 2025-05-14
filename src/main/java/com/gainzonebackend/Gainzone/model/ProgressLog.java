@@ -20,6 +20,8 @@ public class ProgressLog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(unique = true)
+    private String progressLogId;
     private Double weight;
     private Double bodyFatPercentage;
     private Integer caloriesBurned;
@@ -36,6 +38,14 @@ public class ProgressLog {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getProgressLogId() {
+        return progressLogId;
+    }
+
+    public void setProgressLogId(String progressLogId) {
+        this.progressLogId = progressLogId;
     }
 
     public Double getWeight() {

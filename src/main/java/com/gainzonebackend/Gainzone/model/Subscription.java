@@ -19,6 +19,7 @@ public class Subscription {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(unique = true)
     private String stripeSubscriptionId;
 
     @Enumerated(EnumType.STRING)
@@ -32,7 +33,7 @@ public class Subscription {
     private LocalDateTime updatedAt;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "userId")
     @JsonIgnore
     private User user;
 
