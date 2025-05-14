@@ -7,6 +7,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data
@@ -24,7 +25,7 @@ public class Meal {
     @Column(columnDefinition = "TEXT")
     private String ingredients;
     private Integer calories;
-    private LocalDateTime scheduledDate;
+    private LocalDate scheduledDate;
     private Boolean logged;
 
     @ManyToOne
@@ -64,11 +65,11 @@ public class Meal {
         this.calories = calories;
     }
 
-    public LocalDateTime getScheduledDate() {
+    public LocalDate getScheduledDate() {
         return scheduledDate;
     }
 
-    public void setScheduledDate(LocalDateTime scheduledDate) {
+    public void setScheduledDate(LocalDate scheduledDate) {
         this.scheduledDate = scheduledDate;
     }
 

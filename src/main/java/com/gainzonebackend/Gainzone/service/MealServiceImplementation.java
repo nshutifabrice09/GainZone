@@ -41,7 +41,14 @@ public class MealServiceImplementation implements MealService{
 
     @Override
     public Meal updateMeal(Long id, Meal meal) {
-        return null;
+        Meal existMeal = mealRepository.findMealById(id);
+        if(existMeal != null){
+            existMeal.setId(meal.getId());
+            existMeal.setName(meal.getName());
+            existMeal.setIngredients(meal.getIngredients());
+            existMeal.setCalories(meal.getCalories());
+            existMeal.setLogged(meal.getLogged());
+        }return null;
     }
 
 
