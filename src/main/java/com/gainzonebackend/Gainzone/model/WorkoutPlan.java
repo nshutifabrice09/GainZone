@@ -20,8 +20,6 @@ public class WorkoutPlan {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(unique = true)
-    private String workoutPlanId;
     private String title;
     private String description;
     private LocalDateTime startDate;
@@ -48,14 +46,6 @@ public class WorkoutPlan {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getWorkoutPlanId() {
-        return workoutPlanId;
-    }
-
-    public void setWorkoutPlanId(String workoutPlanId) {
-        this.workoutPlanId = workoutPlanId;
     }
 
     public String getTitle() {

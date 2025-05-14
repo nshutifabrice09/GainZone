@@ -19,8 +19,6 @@ public class WorkoutTask {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(unique = true)
-    private String workoutTaskId;
     private String exerciseName;
     private Integer sets;
     private Integer reps;
@@ -39,14 +37,6 @@ public class WorkoutTask {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getWorkoutTaskId() {
-        return workoutTaskId;
-    }
-
-    public void setWorkoutTaskId(String workoutTaskId) {
-        this.workoutTaskId = workoutTaskId;
     }
 
     public String getExerciseName() {
