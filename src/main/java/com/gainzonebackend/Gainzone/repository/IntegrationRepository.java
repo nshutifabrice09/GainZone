@@ -10,6 +10,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface IntegrationRepository extends JpaRepository <Integration, Long> {
-
-    Integration findByIntegrationId(String integrationId);
 }

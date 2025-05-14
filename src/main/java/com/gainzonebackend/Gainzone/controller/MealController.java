@@ -6,6 +6,8 @@ import com.gainzonebackend.Gainzone.service.MealService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @CrossOrigin("http://localhost:3000")
 public class MealController {
@@ -20,5 +22,10 @@ public class MealController {
     @PostMapping("/meal/{nutritionPlanId}")
     public Meal save(@RequestBody Meal meal, @PathVariable Long nutritionPlanId){
         return mealService.saveMeal(meal, nutritionPlanId);
+    }
+
+    @GetMapping("/meals")
+    public List<Meal> mealList(){
+        return mealService.getAllMeals();
     }
 }

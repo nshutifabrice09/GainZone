@@ -27,7 +27,7 @@ public class IntegrationServiceImplementation implements IntegrationService{
 
     @Override
     public Integration getByIntegrationId(String integrationId) {
-        return integrationRepository.findByIntegrationId(integrationId);
+        return null;
     }
 
 
@@ -37,14 +37,10 @@ public class IntegrationServiceImplementation implements IntegrationService{
         integration.setUser(user);
         return integrationRepository.save(integration);
     }
-//    @Override
-    public Integration getIntegrationById(String integrationId) {
-        return integrationRepository.findByIntegrationId(integrationId);
-    }
-
 
     @Override
     public void removeById(Long id) {
-        integrationRepository.deleteById(id);
+
     }
+
 }
