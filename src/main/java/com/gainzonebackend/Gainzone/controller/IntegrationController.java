@@ -3,7 +3,6 @@ package com.gainzonebackend.Gainzone.controller;
 
 import com.gainzonebackend.Gainzone.model.Integration;
 import com.gainzonebackend.Gainzone.service.IntegrationService;
-import com.gainzonebackend.Gainzone.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,8 +30,8 @@ public class IntegrationController {
     }
 
     @GetMapping("/integration/{id}")
-    public Integration getIntegrationById(@PathVariable("id") Long id){
-        return integrationService.getIntegrationById(id);
+    public Integration getIntegrationById(@PathVariable("integrationId") String integrationId){
+        return integrationService.getByIntegrationId(integrationId);
     }
 
     @DeleteMapping("/integrations/{id}")

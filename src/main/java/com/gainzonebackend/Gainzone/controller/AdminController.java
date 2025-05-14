@@ -29,12 +29,12 @@ public class AdminController {
     public Admin findAdminByUsername(@PathVariable("username") String username){
         return adminService.getAdminByUsername(username);
     }
-    @DeleteMapping("/delete/admin/{username}")
+    @DeleteMapping("/admin/admin/{username}")
     public void removeByUsername(@PathVariable("username") String username){
         adminService.removeByUsername(username);
     }
 
-    @PutMapping("/update/admin/{username}")
+    @PutMapping("/admins/admin/{username}")
     public Admin updateAdmin(@PathVariable("username") String username, @RequestBody Admin admin){
         return adminService.updateAdmin(username, admin);
     }

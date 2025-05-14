@@ -26,15 +26,20 @@ public class IntegrationServiceImplementation implements IntegrationService{
     }
 
     @Override
-    public Integration getIntegrationById(Long id) {
-        return integrationRepository.findById();
+    public Integration getByIntegrationId(String integrationId) {
+        return integrationRepository.findByIntegrationId(integrationId);
     }
+
 
     @Override
     public Integration saveIntegration(Integration integration, Long userId) {
         User user = userRepository.findUserById(userId);
         integration.setUser(user);
         return integrationRepository.save(integration);
+    }
+//    @Override
+    public Integration getIntegrationById(String integrationId) {
+        return integrationRepository.findByIntegrationId(integrationId);
     }
 
 
