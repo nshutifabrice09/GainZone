@@ -35,7 +35,7 @@ public class WorkoutPlan {
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "coachId", nullable = false)
+    @JoinColumn(name = "trainerId", nullable = false)
     @JsonIgnore
     private Trainer trainer;
 
