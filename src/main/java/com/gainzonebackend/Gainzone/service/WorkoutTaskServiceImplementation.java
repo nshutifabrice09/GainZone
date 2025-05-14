@@ -17,6 +17,10 @@ public class WorkoutTaskServiceImplementation implements WorkoutPlanService{
         return null;
     }
 
+    @Override
+    public WorkoutPlan saveWorkoutPlan(WorkoutPlan workoutPlan, Long trainerId, Long userId) {
+        return null;
+    }
 
 
     @Override
