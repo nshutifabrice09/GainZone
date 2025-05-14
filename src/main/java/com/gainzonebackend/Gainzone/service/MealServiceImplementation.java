@@ -36,6 +36,8 @@ public class MealServiceImplementation implements MealService{
     @Override
     public Meal saveMeal(Meal meal, Long nutritionPlanId) {
         NutritionPlan nutritionPlan = nutritionPlanRepository.findNutritionById(nutritionPlanId);
+        meal.setNutritionPlan(nutritionPlan);
+        return mealRepository.save(meal);
     }
 
     @Override

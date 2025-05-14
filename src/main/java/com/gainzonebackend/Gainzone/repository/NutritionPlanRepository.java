@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface NutritionPlanRepository extends JpaRepository <NutritionPlan, Long> {
+    NutritionPlan findNutritionById(Long nutritionPlanId);
 }
