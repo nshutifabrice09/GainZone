@@ -43,10 +43,10 @@ public class MealServiceImplementation implements MealService{
     public Meal updateMeal(Long id, Meal meal) {
         Meal existMeal = mealRepository.findMealById(id);
         if(existMeal != null){
-            existMeal.setId(meal.getId());
             existMeal.setName(meal.getName());
             existMeal.setIngredients(meal.getIngredients());
             existMeal.setCalories(meal.getCalories());
+            existMeal.setScheduledDate(meal.getScheduledDate());
             existMeal.setLogged(meal.getLogged());
         }return null;
     }
