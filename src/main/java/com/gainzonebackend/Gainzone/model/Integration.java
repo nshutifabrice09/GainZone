@@ -20,8 +20,6 @@ public class Integration {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true)
-    private String integrationId;
     private String provider;
     private String accessToken; // OAuth token for API access
     private LocalDateTime connectedAt;
@@ -38,14 +36,6 @@ public class Integration {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getIntegrationId() {
-        return integrationId;
-    }
-
-    public void setIntegrationId(String integrationId) {
-        this.integrationId = integrationId;
     }
 
     public String getProvider() {
