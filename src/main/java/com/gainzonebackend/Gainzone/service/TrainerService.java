@@ -7,12 +7,11 @@ import java.util.List;
 public interface TrainerService {
 
     List<Trainer> getAllTrainers();
-    Trainer getTrainerByCid(String cid);
+    Trainer getTrainerById(Long id);
     Trainer saveTrainer(Trainer trainer);
 
-    Trainer updateTrainer(String cid, Trainer trainer);
+    Trainer updateTrainer(Long id, Trainer trainer);
 
-    void removeByCid(String cid);
+    void removeById(Long id);
 
-    Trainer getTrainerById(Long id);
 }

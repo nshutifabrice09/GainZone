@@ -32,18 +32,18 @@ public class TrainerController {
         return trainerService.getTrainerById(id);
     }
 
-    @GetMapping("/trainer/{cid}")
-    public Trainer findTrainerByCid(@PathVariable("cid") String cid){
-        return trainerService.getTrainerByCid(cid);
+    @GetMapping("/trainer/{id}")
+    public Trainer findTrainerByCid(@PathVariable("id") Long id){
+        return trainerService.getTrainerById(id);
     }
 
-    @DeleteMapping("/trainer/{cid}")
-    public void removeByCid(@PathVariable("cid") String cid){
-        trainerService.removeByCid(cid);
+    @DeleteMapping("/trainer/{id}")
+    public void removeById(@PathVariable("id") Long id){
+        trainerService.removeById(id);
     }
 
-    @PutMapping("/trainer/{cid}")
-    public Trainer updateTrainer(@PathVariable("cid") String cid, @RequestBody Trainer trainer){
-        return trainerService.updateTrainer(cid, trainer);
+    @PutMapping("/trainer/{id}")
+    public Trainer updateTrainer(@PathVariable("id") Long id, @RequestBody Trainer trainer){
+        return trainerService.updateTrainer(id, trainer);
     }
 }

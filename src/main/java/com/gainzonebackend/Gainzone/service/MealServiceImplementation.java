@@ -49,6 +49,8 @@ public class MealServiceImplementation implements MealService{
             existMeal.setCalories(meal.getCalories());
             existMeal.setScheduledDate(meal.getScheduledDate());
             existMeal.setLogged(meal.getLogged());
+
+            return mealRepository.save(meal);
         }return null;
     }
 

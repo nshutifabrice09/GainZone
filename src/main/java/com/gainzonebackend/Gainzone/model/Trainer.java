@@ -18,8 +18,6 @@ public class Trainer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(unique = true)
-    private String cid;
     private String firstName;
     private String lastName;
     private String profilePictureUrl;
@@ -44,14 +42,6 @@ public class Trainer {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getCid() {
-        return cid;
-    }
-
-    public void setCid(String cid) {
-        this.cid = cid;
     }
 
     public String getFirstName() {

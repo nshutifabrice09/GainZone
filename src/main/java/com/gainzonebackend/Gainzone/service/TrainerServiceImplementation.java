@@ -18,31 +18,38 @@ public class TrainerServiceImplementation implements TrainerService{
     }
     @Override
     public List<Trainer> getAllTrainers() {
-        return null;
-    }
-
-    @Override
-    public Trainer getTrainerByCid(String cid) {
-        return null;
+        return trainerRepository.findAll();
     }
 
     @Override
     public Trainer saveTrainer(Trainer trainer) {
+        return trainerRepository.save(trainer);
+    }
+
+    @Override
+    public Trainer updateTrainer(Long id, Trainer trainer) {
+        Trainer existTrainer = trainerRepository.findTrainerById(id);
+        if(existTrainer != null){
+            existTrainer.setFirstName(trainer.getFirstName());
+            existTrainer.setLastName(trainer.getLastName());
+            existTrainer.setProfilePictureUrl(trainer.getProfilePictureUrl());
+            existTrainer.setCertifications(trainer.getCertifications());
+            existTrainer.setRating(trainer.getRating());
+            existTrainer.setPhoneNumber(trainer.getPhoneNumber());
+            existTrainer.setPassword(trainer.getPassword());
+            existTrainer.setProfession(trainer.getProfession());
+            return trainerRepository.save(existTrainer);
+        }
         return null;
     }
 
     @Override
-    public Trainer updateTrainer(String cid, Trainer trainer) {
-        return null;
-    }
-
-    @Override
-    public void removeByCid(String cid) {
+    public void removeById(Long id) {
 
     }
 
     @Override
     public Trainer getTrainerById(Long id) {
-        return null;
+        return trainerRepository.findTrainerById(id);
     }
 }
