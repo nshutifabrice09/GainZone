@@ -46,6 +46,11 @@ public class WorkoutPlanServiceImplementation implements WorkoutPlanService{
     }
     @Override
     public WorkoutPlan updateWorkoutPlan(Long id, WorkoutPlan workoutPlan) {
+        WorkoutPlan existWorkoutPlan = workoutPlanRepository.findWorkoutPlanById(id);
+        if(existWorkoutPlan !=null){
+            existWorkoutPlan.
+            return workoutPlanRepository.save(workoutPlan);
+        }
         return null;
     }
 
