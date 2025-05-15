@@ -33,4 +33,9 @@ public class WorkoutTaskController {
     public WorkoutTask getWorkoutTaskById(@PathVariable ("id") Long id){
         return workoutTaskService.getWorkoutTaskById(id);
     }
+
+    @PutMapping("/update/workoutTask/{id}")
+    public WorkoutTask updateWorkoutTask(@PathVariable("id") Long id, @RequestBody WorkoutTask workoutTask){
+        return workoutTaskService.updateWorkoutTask(id, workoutTask);
+    }
 }

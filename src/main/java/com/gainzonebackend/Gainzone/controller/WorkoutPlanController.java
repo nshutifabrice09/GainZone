@@ -48,6 +48,4 @@ public class WorkoutPlanController {
     public void removeById(@PathVariable ("id") Long id){
         workoutPlanService.removeById(id);
     }
-
-
 }
