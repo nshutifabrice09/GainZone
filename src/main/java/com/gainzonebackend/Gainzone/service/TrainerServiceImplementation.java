@@ -45,7 +45,7 @@ public class TrainerServiceImplementation implements TrainerService{
 
     @Override
     public void removeById(Long id) {
-
+        trainerRepository.deleteById(id);
     }
 
     @Override

@@ -7,6 +7,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data
@@ -23,7 +24,7 @@ public class ProgressLog {
     private Double weight;
     private Double bodyFatPercentage;
     private Integer caloriesBurned;
-    private LocalDateTime loggedAt;
+    private LocalDate loggedAt;
 
     @ManyToOne
     @JoinColumn(name = "userId")
@@ -62,11 +63,11 @@ public class ProgressLog {
         this.caloriesBurned = caloriesBurned;
     }
 
-    public LocalDateTime getLoggedAt() {
+    public LocalDate getLoggedAt() {
         return loggedAt;
     }
 
-    public void setLoggedAt(LocalDateTime loggedAt) {
+    public void setLoggedAt(LocalDate loggedAt) {
         this.loggedAt = loggedAt;
     }
 

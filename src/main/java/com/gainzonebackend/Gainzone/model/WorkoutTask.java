@@ -7,6 +7,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data
@@ -24,7 +25,7 @@ public class WorkoutTask {
     private Integer reps;
     private Integer duration;
     private String videoUrl;
-    private LocalDateTime scheduledDate;
+    private LocalDate scheduledDate;
     private Boolean completed;
     @ManyToOne
     @JoinColumn(name = "workoutPlanId")
@@ -79,11 +80,11 @@ public class WorkoutTask {
         this.videoUrl = videoUrl;
     }
 
-    public LocalDateTime getScheduledDate() {
+    public LocalDate getScheduledDate() {
         return scheduledDate;
     }
 
-    public void setScheduledDate(LocalDateTime scheduledDate) {
+    public void setScheduledDate(LocalDate scheduledDate) {
         this.scheduledDate = scheduledDate;
     }
 
