@@ -16,7 +16,7 @@ public class WorkoutPlanController {
     private final WorkoutPlanService workoutPlanService;
 
     @Autowired
-    public WorkoutPlanController(@Qualifier("workoutPlanServiceImplementation") WorkoutPlanService workoutPlanService) {
+    public WorkoutPlanController(WorkoutPlanService workoutPlanService) {
         this.workoutPlanService = workoutPlanService;
     }
 

@@ -1,6 +1,6 @@
 package com.gainzonebackend.Gainzone.service;
 
-import com.gainzonebackend.Gainzone.model.WorkoutPlan;
+import com.gainzonebackend.Gainzone.model.WorkoutTask;
 import com.gainzonebackend.Gainzone.repository.WorkoutPlanRepository;
 import com.gainzonebackend.Gainzone.repository.WorkoutTaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class WorkoutTaskServiceImplementation implements WorkoutPlanService{
+public class WorkoutTaskServiceImplementation implements WorkoutTaskService{
 
     private final WorkoutTaskRepository workoutTaskRepository;
     private final WorkoutPlanRepository workoutPlanRepository;
@@ -20,29 +20,29 @@ public class WorkoutTaskServiceImplementation implements WorkoutPlanService{
         this.workoutPlanRepository = workoutPlanRepository;
     }
 
+
     @Override
-    public List<WorkoutPlan> getAllWorkoutPlans() {
+    public List<WorkoutTask> getAllWorkoutTasks() {
         return null;
     }
 
     @Override
-    public WorkoutPlan getWorkoutPlanById(Long id) {
+    public WorkoutTask getWorkoutTaskById(Long id) {
         return null;
     }
 
     @Override
-    public WorkoutPlan saveWorkoutPlan(WorkoutPlan workoutPlan, Long trainerId, Long userId) {
+    public WorkoutTask saveWorkoutTask(WorkoutTask workoutTask, Long workoutPlanId) {
         return null;
     }
 
-
     @Override
-    public WorkoutPlan updateWorkoutPlan(Long id, WorkoutPlan workoutPlan) {
+    public WorkoutTask updateWorkoutTask(Long id, WorkoutTask workoutTask) {
         return null;
     }
 
     @Override
     public void removeById(Long id) {
-        workoutTaskRepository.deleteById(id);
+
     }
 }
