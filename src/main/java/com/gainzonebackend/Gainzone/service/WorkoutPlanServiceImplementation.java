@@ -1,5 +1,7 @@
 package com.gainzonebackend.Gainzone.service;
 
+import com.gainzonebackend.Gainzone.model.Trainer;
+import com.gainzonebackend.Gainzone.model.User;
 import com.gainzonebackend.Gainzone.model.WorkoutPlan;
 import com.gainzonebackend.Gainzone.repository.TrainerRepository;
 import com.gainzonebackend.Gainzone.repository.UserRepository;
@@ -26,19 +28,22 @@ public class WorkoutPlanServiceImplementation implements WorkoutPlanService{
 
     @Override
     public List<WorkoutPlan> getAllWorkoutPlans() {
-        return null;
+        return workoutPlanRepository.findAll();
     }
 
     @Override
     public WorkoutPlan getWorkoutPlanById(Long id) {
-        return null;
+        return workoutPlanRepository.findWorkoutPlanById(id);
     }
 
     @Override
     public WorkoutPlan saveWorkoutPlan(WorkoutPlan workoutPlan, Long trainerId, Long userId) {
-        return null;
+        Trainer trainer = trainerRepository.findTrainerById(trainerId);
+        User user = userRepository.findUserById(userId);
+        workoutPlan.setTrainer(trainer);
+        workoutPlan.setUser(user);
+        return workoutPlanRepository.save(workoutPlan);
     }
-
     @Override
     public WorkoutPlan updateWorkoutPlan(Long id, WorkoutPlan workoutPlan) {
         return null;
