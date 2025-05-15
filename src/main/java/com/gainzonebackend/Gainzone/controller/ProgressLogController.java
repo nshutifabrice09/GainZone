@@ -38,4 +38,8 @@ public class ProgressLogController {
         return progressLogService.updateProgressLog(id, progressLog);
     }
 
+    @DeleteMapping("/delete/progressLog/{id}")
+    public void removeById(@PathVariable ("id") Long id){
+        progressLogService.removeById(id);
+    }
 }
