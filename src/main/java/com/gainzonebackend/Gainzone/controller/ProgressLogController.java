@@ -33,4 +33,9 @@ public class ProgressLogController {
         return progressLogService.getProgressLogById(id);
     }
 
+    @PutMapping("/update/progressLog/{id}")
+    public ProgressLog updateProgressLog(@RequestBody ProgressLog progressLog, @PathVariable ("id") Long id){
+        return progressLogService.updateProgressLog(id, progressLog);
+    }
+
 }
