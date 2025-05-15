@@ -28,4 +28,9 @@ public class ProgressLogController {
         return progressLogService.getAllProgressLogs();
     }
 
+    @GetMapping("/progressLogs/{id}")
+    public ProgressLog getProgressLogById(@PathVariable ("id") Long id){
+        return progressLogService.getProgressLogById(id);
+    }
+
 }
