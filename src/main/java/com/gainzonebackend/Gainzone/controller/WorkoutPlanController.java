@@ -2,6 +2,7 @@ package com.gainzonebackend.Gainzone.controller;
 
 
 import com.gainzonebackend.Gainzone.model.WorkoutPlan;
+import com.gainzonebackend.Gainzone.model.WorkoutTask;
 import com.gainzonebackend.Gainzone.service.WorkoutPlanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -35,6 +36,17 @@ public class WorkoutPlanController {
     @GetMapping("/workoutPlan/{id}")
     public WorkoutPlan getWorkoutPlanById(@PathVariable ("id") Long id){
         return workoutPlanService.getWorkoutPlanById(id);
+    }
+
+    @PutMapping("/update/workoutPlan/{id}")
+    public WorkoutPlan updateWorkoutPlan(@PathVariable ("id") Long id, @RequestBody WorkoutPlan workoutPlan){
+        return workoutPlanService.updateWorkoutPlan(id, workoutPlan);
+    }
+
+
+    @DeleteMapping("/delete/workoutPlan/{id}")
+    public void removeById(@PathVariable ("id") Long id){
+        workoutPlanService.removeById(id);
     }
 
 
