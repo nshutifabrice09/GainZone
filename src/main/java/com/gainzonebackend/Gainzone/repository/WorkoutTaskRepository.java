@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface WorkoutTaskRepository extends JpaRepository <WorkoutTask, Long>{
+    WorkoutTask findWorkoutTaskById(Long id);
 }

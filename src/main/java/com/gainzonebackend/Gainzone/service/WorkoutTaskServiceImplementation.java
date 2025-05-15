@@ -23,12 +23,12 @@ public class WorkoutTaskServiceImplementation implements WorkoutTaskService{
 
     @Override
     public List<WorkoutTask> getAllWorkoutTasks() {
-        return null;
+        return workoutTaskRepository.findAll();
     }
 
     @Override
     public WorkoutTask getWorkoutTaskById(Long id) {
-        return null;
+        return workoutTaskRepository.findWorkoutTaskById(id);
     }
 
     @Override
@@ -43,6 +43,6 @@ public class WorkoutTaskServiceImplementation implements WorkoutTaskService{
 
     @Override
     public void removeById(Long id) {
-
+        workoutTaskRepository.deleteById(id);
     }
 }
