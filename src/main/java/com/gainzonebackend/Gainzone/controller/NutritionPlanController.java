@@ -29,4 +29,19 @@ public class NutritionPlanController {
     public List<NutritionPlan> nutritionPlanList(){
         return nutritionPlanService.getAllNutritionPlans();
     }
+
+    @GetMapping("/nutritionPlan/{id}")
+    public NutritionPlan getNutritionPlanById(@PathVariable ("id") Long id){
+        return nutritionPlanService.getNutritionPlanById(id);
+    }
+
+    @PutMapping("/update/nutritionPlan/{id}")
+    public NutritionPlan updateNutritionPlan(@PathVariable ("id") Long id, @RequestBody NutritionPlan nutritionPlan){
+        return nutritionPlanService.updateNutritionPlan(id, nutritionPlan);
+    }
+
+    @DeleteMapping("/delete/nutritionPlan/{id}")
+    public void removeById(@PathVariable ("id") Long id){
+        nutritionPlanService.removeById(id);
+    }
 }
