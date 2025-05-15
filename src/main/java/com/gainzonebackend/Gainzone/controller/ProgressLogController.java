@@ -1,2 +1,10 @@
-package com.gainzonebackend.Gainzone.controller;public class ProgressLogController {
+package com.gainzonebackend.Gainzone.controller;
+
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@CrossOrigin("http://localhost:3000")
+public class ProgressLogController {
+    
 }
