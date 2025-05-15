@@ -20,7 +20,7 @@ public class MealController {
     }
 
     @PostMapping("/meal/{nutritionPlanId}")
-    public Meal save(@RequestBody Meal meal, @PathVariable Long nutritionPlanId){
+    public Meal save(@RequestBody Meal meal, @PathVariable ("nutritionPlanId") Long nutritionPlanId){
         return mealService.saveMeal(meal, nutritionPlanId);
     }
 

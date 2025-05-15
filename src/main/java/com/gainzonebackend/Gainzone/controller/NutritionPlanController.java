@@ -20,8 +20,8 @@ public class NutritionPlanController {
 
     @PostMapping("/nutritionPlan/{trainerId}/{userId}")
     public NutritionPlan saveNutritionPlan(@RequestBody NutritionPlan nutritionPlan,
-                                           @PathVariable Long trainerId,
-                                           @PathVariable Long userId){
+                                           @PathVariable ("trainerId") Long trainerId,
+                                           @PathVariable ("userId") Long userId){
         return nutritionPlanService.saveNutritionPlan(nutritionPlan, trainerId, userId);
     }
 
