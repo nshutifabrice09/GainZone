@@ -1,6 +1,7 @@
 package com.gainzonebackend.Gainzone.service;
 
 import com.gainzonebackend.Gainzone.model.ProgressLog;
+import com.gainzonebackend.Gainzone.model.User;
 import com.gainzonebackend.Gainzone.repository.ProgressLogRepository;
 import com.gainzonebackend.Gainzone.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,17 +34,26 @@ public class ProgressLogServiceImplementation implements ProgressLogService{
 
     @Override
     public ProgressLog saveProgressLog(ProgressLog progressLog, Long userId) {
-        return null;
+        User user = userRepository.findUserById(userId);
+        progressLog.setUser(user);
+        return progressLogRepository.save(progressLog);
     }
-
 
     @Override
     public ProgressLog updateProgressLog(Long id, ProgressLog progressLog) {
+        ProgressLog existProgressLog = progressLogRepository.findProgressLogById(id);
+        if(existProgressLog != null) {
+            existProgressLog.setWeight(progressLog.getWeight());
+            existProgressLog.setBodyFatPercentage(progressLog.getBodyFatPercentage());
+            existProgressLog.setCaloriesBurned(progressLog.getCaloriesBurned());
+            existProgressLog.setLoggedAt(progressLog.getLoggedAt());
+            return progressLogRepository.save(progressLog);
+        }
         return null;
     }
 
     @Override
     public void removeById(Long id) {
-
+        progressLogRepository.deleteById(id);
     }
 }
