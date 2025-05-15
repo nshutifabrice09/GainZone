@@ -58,6 +58,6 @@ public class WorkoutPlanServiceImplementation implements WorkoutPlanService{
 
     @Override
     public void removeById(Long id) {
-
+        workoutPlanRepository.deleteById(id);
     }
 }

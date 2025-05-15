@@ -1,2 +1,4 @@
-package com.gainzonebackend.Gainzone.controller;public class WorkoutPlanController {
+package com.gainzonebackend.Gainzone.controller;
+
+public class WorkoutPlanController {
 }
