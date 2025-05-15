@@ -5,6 +5,8 @@ import com.gainzonebackend.Gainzone.service.NutritionPlanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @CrossOrigin("http://localhost:3000")
 public class NutritionPlanController {
@@ -21,5 +23,10 @@ public class NutritionPlanController {
                                            @PathVariable Long trainerId,
                                            @PathVariable Long userId){
         return nutritionPlanService.saveNutritionPlan(nutritionPlan, trainerId, userId);
+    }
+
+    @GetMapping("/nutritionPlans")
+    public List<NutritionPlan> nutritionPlanList(){
+        return nutritionPlanService.getAllNutritionPlans();
     }
 }
