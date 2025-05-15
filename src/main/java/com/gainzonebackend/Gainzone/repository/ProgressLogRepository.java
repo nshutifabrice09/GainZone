@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ProgressLogRepository extends JpaRepository <ProgressLog, Long> {
+    ProgressLog findProgressLogById(Long id);
 }

@@ -23,12 +23,12 @@ public class ProgressLogServiceImplementation implements ProgressLogService{
 
     @Override
     public List<ProgressLog> getAllProgressLogs() {
-        return null;
+        return progressLogRepository.findAll();
     }
 
     @Override
     public ProgressLog getProgressLogById(Long id) {
-        return null;
+        return progressLogRepository.findProgressLogById(id);
     }
 
     @Override
