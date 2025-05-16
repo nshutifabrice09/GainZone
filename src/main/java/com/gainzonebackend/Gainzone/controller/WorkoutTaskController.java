@@ -38,4 +38,9 @@ public class WorkoutTaskController {
     public WorkoutTask updateWorkoutTask(@PathVariable("id") Long id, @RequestBody WorkoutTask workoutTask){
         return workoutTaskService.updateWorkoutTask(id, workoutTask);
     }
+
+    @DeleteMapping("/delete/workoutTask/{id}")
+    public void removeById(@PathVariable ("id") Long id){
+        workoutTaskService.removeById(id);
+    }
 }
