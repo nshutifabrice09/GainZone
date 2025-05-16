@@ -19,7 +19,6 @@ public class Integration {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String provider;
     private String accessToken; // OAuth token for API access
     private LocalDateTime connectedAt;

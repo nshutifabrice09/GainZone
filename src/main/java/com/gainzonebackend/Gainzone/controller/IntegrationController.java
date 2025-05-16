@@ -30,8 +30,8 @@ public class IntegrationController {
     }
 
     @GetMapping("/integration/{id}")
-    public Integration getIntegrationById(@PathVariable("integrationId") String integrationId){
-        return integrationService.getByIntegrationId(integrationId);
+    public Integration getIntegrationById(@PathVariable("id") Long id){
+        return integrationService.getByIntegrationId(id);
     }
 
     @DeleteMapping("/integrations/{id}")

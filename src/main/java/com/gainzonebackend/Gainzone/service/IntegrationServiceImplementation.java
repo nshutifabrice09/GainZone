@@ -26,9 +26,10 @@ public class IntegrationServiceImplementation implements IntegrationService{
     }
 
     @Override
-    public Integration getByIntegrationId(String integrationId) {
-        return null;
+    public Integration getByIntegrationId(Long id) {
+        return integrationRepository.findIntegrationById(id);
     }
+
 
 
     @Override
@@ -40,7 +41,7 @@ public class IntegrationServiceImplementation implements IntegrationService{
 
     @Override
     public void removeById(Long id) {
-
+        integrationRepository.deleteById(id);
     }
 
 }

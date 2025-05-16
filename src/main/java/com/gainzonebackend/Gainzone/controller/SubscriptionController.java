@@ -32,7 +32,13 @@ public class SubscriptionController {
         return subscriptionService.getSubscriptionById(id);
     }
 
-    @DeleteMapping("/subscription/{id}")
+    @PutMapping("/update/subscription/{id}")
+    public Subscription updateSubscription(@PathVariable ("id") Long id, @RequestBody Subscription subscription){
+        return subscriptionService.updateSubscription(id, subscription);
+    }
+
+
+    @DeleteMapping("/delete/subscription/{id}")
     public void removeById(@PathVariable("id") Long id) {
         subscriptionService.removeById(id);
     }
