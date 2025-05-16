@@ -34,6 +34,11 @@ public class IntegrationController {
         return integrationService.getByIntegrationId(id);
     }
 
+    @PutMapping("/update/integration/{id}")
+    public Integration updateIntegration(@PathVariable ("id") Long id, @RequestBody Integration integration){
+        return integrationService.updateIntegration(id, integration);
+    }
+
     @DeleteMapping("/integrations/{id}")
     public void deleteById(@PathVariable ("id") Long id){
         integrationService.removeById(id);

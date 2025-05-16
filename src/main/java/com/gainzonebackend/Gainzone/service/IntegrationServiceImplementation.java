@@ -40,6 +40,16 @@ public class IntegrationServiceImplementation implements IntegrationService{
     }
 
     @Override
+    public Integration updateIntegration(Long id, Integration integration) {
+        Integration existIntegration = integrationRepository.findIntegrationById(id);
+        if(existIntegration != null){
+            existIntegration.setProvider(existIntegration.getProvider());
+            return integrationRepository.save(integration);
+        }
+        return null;
+    }
+
+    @Override
     public void removeById(Long id) {
         integrationRepository.deleteById(id);
     }
