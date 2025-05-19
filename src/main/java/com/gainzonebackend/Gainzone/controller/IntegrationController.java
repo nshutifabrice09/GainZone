@@ -39,7 +39,7 @@ public class IntegrationController {
         return integrationService.updateIntegration(id, integration);
     }
 
-    @DeleteMapping("/integrations/{id}")
+    @DeleteMapping("/delete/integrations/{id}")
     public void deleteById(@PathVariable ("id") Long id){
         integrationService.removeById(id);
     }

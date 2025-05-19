@@ -1,0 +1,129 @@
+USER
+____
+POST http://localhost:8080/admin
+
+GET http://localhost:8080/admins
+
+GET http://localhost:8080/admin/{{username}}
+
+
+PUT http://localhost:8080/admins/admin/{{username}}
+
+DELETE http://localhost:8080/admin/admin/{{username}}
+
+
+Integration
+___________
+POST http://localhost:8080/integration/{{userId}}
+
+GET http://localhost:8080/integrations
+
+GET http://localhost:8080/integration/{{id}}
+
+PUT http://localhost:8080/update/integration/{{id}}
+
+DELETE http://localhost:8080/delete/integrations/{{id}}
+
+
+Meal
+____
+POST http://localhost:8080/meal/{{nutritionPlanId}}
+
+GET http://localhost:8080/meals
+
+GET http://localhost:8080/meal/{{id}}
+
+PUT http://localhost:8080/meal/meal/{{id}}
+
+DELETE http://localhost:8080/meals/meal/{{id}}
+
+
+NutritionPlan
+_____________
+POST http://localhost:8080/nutritionPlan/{{trainerId}}/{{userId}}
+
+GET http://localhost:8080/nutritionPlans
+
+GET http://localhost:8080/nutritionPlan/{{id}}
+
+PUT http://localhost:8080/update/nutritionPlan/{{id}}
+
+DELETE http://localhost:8080/delete/nutritionPlan/{{id}}
+
+
+ProgressLog
+___________
+POST http://localhost:8080/progressLog/{{userId}}
+
+GET http://localhost:8080/progressLogs
+
+GET http://localhost:8080/progressLogs/{{id}}
+
+PUT http://localhost:8080/update/progressLog/{{id}}
+
+DELETE http://localhost:8080/delete/progressLog/{{id}}
+
+
+Subscription
+____________
+POST http://localhost:8080/subscription/{{userId}}
+
+GET http://localhost:8080/subscriptions
+
+GET http://localhost:8080/subscription/{{id}}
+
+PUT http://localhost:8080/update/subscription/{{id}}
+
+DELETE http://localhost:8080/delete/subscription/{{id}}
+
+
+Trainer
+_______
+POST http://localhost:8080/trainer
+
+GET http://localhost:8080/trainers
+
+GET http://localhost:8080/trainers/{{id}}
+
+PUT http://localhost:8080/trainer/trainer/{{id}}
+
+DELETE http://localhost:8080/trainers/trainer/{{id}}
+
+
+User
+____
+POST http://localhost:8080/user
+
+GET http://localhost:8080/users
+
+GET http://localhost:8080/users/{{membershipId}}
+
+PUT http://localhost:8080/users/users/{{membershipId}}
+
+DELETE http://localhost:8080/user/user/{{membershipId}}
+
+
+WorkoutPlan
+___________
+POST http://localhost:8080/workoutPlan/{{trainerId}}/{{userId}}
+
+GET http://localhost:8080/workoutPlans
+
+GET http://localhost:8080/workoutPlan/{{id}}
+
+PUT http://localhost:8080/update/workoutPlan/{{id}}
+
+DELETE http://localhost:8080/delete/workoutPlan/{{id}}
+
+
+WorkoutTask
+___________
+POST http://localhost:8080/workoutTask/{{workoutPlanId}}
+
+GET http://localhost:8080/workoutTasks
+
+GET http://localhost:8080/workoutTask/{{id}}
+
+PUT http://localhost:8080/update/workoutTask/{{id}}
+
+DELETE http://localhost:8080/delete/workoutTask/{{id}}
