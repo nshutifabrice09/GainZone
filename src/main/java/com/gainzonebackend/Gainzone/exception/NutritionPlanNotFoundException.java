@@ -1,7 +1,7 @@
 package com.gainzonebackend.Gainzone.exception;
 
-public class NutritionNotFoundException extends RuntimeException{
-    public NutritionNotFoundException(Long id){
+public class NutritionPlanNotFoundException extends RuntimeException{
+    public NutritionPlanNotFoundException(Long id){
         super
                 ("Couldn't find a NutritionPlan with id "+id);
     }
