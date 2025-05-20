@@ -37,6 +37,7 @@ public class AdminServiceImplementation implements AdminService{
         if(existAdmin !=null){
             existAdmin.setUsername(admin.getUsername());
             existAdmin.setPassword(admin.getPassword());
+            return adminRepository.save(existAdmin);
         }
         return null;
     }

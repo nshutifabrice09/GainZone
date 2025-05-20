@@ -47,7 +47,7 @@ public class ProgressLogServiceImplementation implements ProgressLogService{
             existProgressLog.setBodyFatPercentage(progressLog.getBodyFatPercentage());
             existProgressLog.setCaloriesBurned(progressLog.getCaloriesBurned());
             existProgressLog.setLoggedAt(progressLog.getLoggedAt());
-            return progressLogRepository.save(progressLog);
+            return progressLogRepository.save(existProgressLog);
         }
         return null;
     }

@@ -51,7 +51,7 @@ public class WorkoutPlanServiceImplementation implements WorkoutPlanService{
             existWorkoutPlan.setTitle(workoutPlan.getTitle());
             existWorkoutPlan.setDescription(workoutPlan.getDescription());
             existWorkoutPlan.setUpdatedAt(workoutPlan.getUpdatedAt());
-            return workoutPlanRepository.save(workoutPlan);
+            return workoutPlanRepository.save(existWorkoutPlan);
         }
         return null;
     }

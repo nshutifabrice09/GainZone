@@ -50,7 +50,7 @@ public class MealServiceImplementation implements MealService{
             existMeal.setScheduledDate(meal.getScheduledDate());
             existMeal.setLogged(meal.getLogged());
 
-            return mealRepository.save(meal);
+            return mealRepository.save(existMeal);
         }return null;
     }
 

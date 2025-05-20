@@ -46,6 +46,7 @@ public class UserServiceImplementation implements UserService {
             existUser.setAddress(user.getAddress());
             existUser.setAge(user.getAge());
             existUser.setWeight(user.getWeight());
+            return userRepository.save(existUser);
         }return null;
     }
 

@@ -48,7 +48,7 @@ public class WorkoutTaskServiceImplementation implements WorkoutTaskService{
             existWorkoutTask.setReps(workoutTask.getReps());
             existWorkoutTask.setDuration(workoutTask.getDuration());
             existWorkoutTask.setCompleted(workoutTask.getCompleted());
-            return workoutTaskRepository.save(workoutTask);
+            return workoutTaskRepository.save(existWorkoutTask);
         }
         return null;
     }

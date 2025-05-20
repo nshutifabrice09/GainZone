@@ -44,7 +44,7 @@ public class IntegrationServiceImplementation implements IntegrationService{
         Integration existIntegration = integrationRepository.findIntegrationById(id);
         if(existIntegration != null){
             existIntegration.setProvider(existIntegration.getProvider());
-            return integrationRepository.save(integration);
+            return integrationRepository.save(existIntegration);
         }
         return null;
     }
