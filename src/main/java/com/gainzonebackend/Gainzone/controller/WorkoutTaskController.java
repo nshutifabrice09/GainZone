@@ -1,6 +1,5 @@
 package com.gainzonebackend.Gainzone.controller;
 
-import com.gainzonebackend.Gainzone.model.WorkoutPlan;
 import com.gainzonebackend.Gainzone.model.WorkoutTask;
 import com.gainzonebackend.Gainzone.service.WorkoutTaskService;
 import org.springframework.beans.factory.annotation.Autowired;

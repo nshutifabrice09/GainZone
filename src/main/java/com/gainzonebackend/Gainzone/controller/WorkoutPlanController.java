@@ -2,10 +2,8 @@ package com.gainzonebackend.Gainzone.controller;
 
 
 import com.gainzonebackend.Gainzone.model.WorkoutPlan;
-import com.gainzonebackend.Gainzone.model.WorkoutTask;
 import com.gainzonebackend.Gainzone.service.WorkoutPlanService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

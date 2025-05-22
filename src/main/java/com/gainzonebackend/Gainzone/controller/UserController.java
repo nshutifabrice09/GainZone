@@ -1,7 +1,6 @@
 package com.gainzonebackend.Gainzone.controller;
 
 import com.gainzonebackend.Gainzone.model.User;
-import com.gainzonebackend.Gainzone.repository.UserRepository;
 import com.gainzonebackend.Gainzone.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
